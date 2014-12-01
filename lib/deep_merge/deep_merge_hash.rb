@@ -17,7 +17,8 @@ module DeepMerge
     # deep_merge will merge and skip any unmergeables in destination hash
     def deep_merge(source, options = {})
       default_opts = {:preserve_unmergeables => true}
-      DeepMerge::deep_merge!(source, self, default_opts.merge(options))
+      new_dest = Marshal.load(Marshal.dump(self))
+      DeepMerge::deep_merge!(source, new_dest, default_opts.merge(options))
     end
 
   end # DeepMergeHashExt

@@ -1,8 +1,10 @@
 # -*- encoding: utf-8 -*-
 
+require File.expand_path('../lib/deep_merge/version', __FILE__)
+
 Gem::Specification.new do |s|
   s.name = %q{deep_merge}
-  s.version = "1.0.1"
+  s.version = DeepMerge::VERSION
 
   s.authors = ["Steve Midgley"]
   s.date = %q{2011-07-28}
